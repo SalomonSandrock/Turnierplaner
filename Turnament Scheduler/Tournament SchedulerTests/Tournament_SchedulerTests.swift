@@ -1,15 +1,15 @@
 //
-//  Turnament_SchedulerTests.swift
-//  Turnament SchedulerTests
+//  Tournament_SchedulerTests.swift
+//  Tournament SchedulerTests
 //
 //  Created by Erik Koltermann on 13.10.17.
 //  Copyright © 2017 Erik Koltermann. All rights reserved.
 //
 
 import XCTest
-@testable import Turnament_Scheduler
+@testable import Tournament_Scheduler
 
-class Turnament_SchedulerTests: XCTestCase {
+class Tournament_SchedulerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
