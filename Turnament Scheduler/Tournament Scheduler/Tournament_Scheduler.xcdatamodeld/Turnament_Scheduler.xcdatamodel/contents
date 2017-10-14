@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Spieler" representedClassName="Spieler" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spielerNummer" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="vorname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="player_team_rel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="team_player_rel" inverseEntity="Team" syncable="YES"/>
+    </entity>
+    <entity name="Team" representedClassName="Team" syncable="YES" codeGenerationType="class">
+        <attribute name="teamName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamNummer" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="team_player_rel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Spieler" inverseName="player_team_rel" inverseEntity="Spieler" syncable="YES"/>
+        <relationship name="team_turnier_rel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Turnier" inverseName="turnier_team_rel" inverseEntity="Turnier" syncable="YES"/>
+    </entity>
+    <entity name="Turnier" representedClassName="Turnier" syncable="YES" codeGenerationType="class">
+        <attribute name="ausrichtungsDatum" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="austragsort" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="einschraenkungen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="erstellungsDatum" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="turnierName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="turnierNr" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="turnier_team_rel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Team" inverseName="team_turnier_rel" inverseEntity="Team" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Spieler" positionX="214" positionY="180" width="128" height="103"/>
+        <element name="Team" positionX="387" positionY="9" width="128" height="103"/>
+        <element name="Turnier" positionX="-63" positionY="-18" width="128" height="148"/>
+    </elements>
+</model>
