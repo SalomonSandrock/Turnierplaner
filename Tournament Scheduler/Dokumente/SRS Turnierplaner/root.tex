@@ -1,0 +1,91 @@
+% Dokumentenkopf 
+% Diese Vorlage basiert auf "scrreprt" aus dem koma-script.
+
+\documentclass[
+   11pt, % Schriftgröße
+   DIV10,
+   ngerman, % für Umlaute, Silbentrennung etc.
+   a4paper, % Papierformat
+   oneside, % einseitiges Dokument
+   titlepage, % es wird eine Titelseite verwendet
+   parskip=half, % Abstand zwischen Absätzen (halbe Zeile)
+   headings=normal, % Grˆﬂe der Überschriften verkleinern
+   listof=totoc, % Verzeichnisse im Inhaltsverzeichnis aufführen
+   bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
+   index=totoc, % Index im Inhaltsverzeichnis aufführen
+   captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
+   final, % Status des Dokuments (final/draft)
+   numbers=noenddot
+]{scrreprt}
+
+%Abstände ändern
+\renewcommand*{\chapterheadstartvskip}{\vspace{-1\baselineskip}} %Abstand vor Section
+\setlength{\headsep}{30pt} %Abstand Kopfzeile Textkörper
+
+% Meta-Informationen 
+%   Informationen über das Dokument, wie z.B. Titel, Autor, Matrikelnr. etc
+\input{Meta} %Meta.tex
+
+% benötigte Packages
+\input{Packages} %Packages.tex
+ 
+% Erstellung eines Index
+\makeindex
+
+% Kopf- und Fuﬂzeilen, Seitenränder etc. 
+\input{Seitenstil} %Seitenstil.tex
+
+% eigene Definitionen für Silbentrennung
+\include{Silbentrennung} %Silbentrennung.tex
+
+% eigene LaTeX-Befehle
+\include{Befehle} %Befehle.tex
+
+% Das eigentliche Dokument
+\begin{document}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Deckblatt und Abstract ohne Seitenzahl
+\ofoot{}
+\include{Deckblatt} %Deckblatt.tex
+\include{Inhalt/Abstract}
+\ofoot{\pagemark}
+
+% Seitennummerierung 
+\pagenumbering{Roman}
+\tableofcontents % Inhaltsverzeichnis
+
+% Abkürzungsverzeichnis
+\include{Inhalt/Akronyme} %Akronyme.tex
+\listoffigures % Abbildungsverzeichnis
+\listoftables % Tabellenverzeichnis
+
+% arabische Seitenzahlen im Hauptteil 
+\clearpage
+\pagenumbering{arabic}
+
+% die Inhaltskapitel werden in "Inhalt.tex" inkludiert
+\input{Inhalt} %Inhalt.tex
+
+% Literaturverzeichnis 
+\bibliography{Bibliographie} % Aufruf: bibtex Bibliographie.bib
+\bibliographystyle{natdin} % DIN-Stil des Literaturverzeichnisses
+
+% Selbständigkeitserklärung
+\include{Erklaerung} %Erklaerung.tex
+
+% Anhang 
+%\begin{appendix}
+%   \clearpage
+%   \pagenumbering{roman}
+%   \chapter{Anhang} %Anhang.tex
+%   \label{sec:Anhang}
+%   \setdefaultleftmargin{1em}{}{}{}{}{}
+%   \input{Anhang}
+%\end{appendix}
+
+% Ende des Dokuments
+\end{document}
+------------------------------------------
