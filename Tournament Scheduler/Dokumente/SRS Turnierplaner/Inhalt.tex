@@ -92,7 +92,7 @@ Desweiteren werden die Anforderungen durch ein Zahlensystem von 1 bis 5 priorisi
 	
 	\begin{tabularx}{\textwidth}{|l|l|l|}
 		ID & Priorität & Abhängigkeit \\
-		0400 & 3 & 0100\\
+		0400 & 3 & 0200\\
 		\hline
 		Name & \multicolumn{2}{l}{Turnier löschen} \\
 		\multicolumn{3}{l}{Beschreibung}\\
@@ -172,7 +172,7 @@ Desweiteren werden die Anforderungen durch ein Zahlensystem von 1 bis 5 priorisi
 	
 	\begin{tabularx}{\textwidth}{|l|l|l|}
 		ID & Priorität & Abhängigkeit \\
-		1000 & 1 & \\
+		1000 & 1 & 0900\\
 		\hline
 		Name & \multicolumn{2}{l}{Turnier starten} \\
 		\multicolumn{3}{l}{Beschreibung}\\
@@ -199,6 +199,39 @@ Desweiteren werden die Anforderungen durch ein Zahlensystem von 1 bis 5 priorisi
 		\multicolumn{3}{l}{}\\
 		\hline		 
 	\end{tabularx}
+	
+	\begi{tikzpicture} [node distance=0.75cm and -0.5cm, rounded corners, >=stealth']
+		\node[draw, rectangle] (0000) {start};
+		\node[draw, rectangle, below =of 0000] (0100) {0100};
+		\node[draw, rectangle, below =of 0100] (0200) {0200};
+		\node[draw, rectangle, below left=of 0200] (0300) {0300};
+		\node[draw, rectangle, below right=of 0200] (0400) {0400};
+		\node[draw, rectangle, below =of 0200] (0500) {0500};
+		\node[draw, rectangle, below left=of 0500] (0600) {0600};
+		\node[draw, rectangle, below right=of 0500] (0700) {0700};
+		\node[draw, rectangle, below =of 0700] (0800) {0800};
+		\node[draw, rectangle, below =of 0500] (0900) {0900};
+		\node[draw, rectangle, below left=of 0900] (0910) {0910};
+		\node[draw, rectangle, below right=of 0900] (0920) {0920};
+		\node[draw, rectangle, below =of 0900] (1000) {1000};
+		\node[draw, rectangle, below =of 1000] (1100) {1100};
+		\node[draw, rectangle, below =of 1100] (1200) {1200};
+		
+		\draw[->, >=stealth'] (0000) -- (0100);
+		\draw[->, >=stealth'] (0100) -- (0200);
+		\draw[->, >=stealth', rounded corners] (0200.south) -- ++(0, -0.5)-| (0300);
+		\draw[->, >=stealth', rounded corners] (0200.south) -- ++(0, -0.5)-| (0400);
+		\draw[->, >=stealth'] (0200) -- (0500);
+		\draw[->, >=stealth', rounded corners] (0500.south) -- ++(0, -0.5)-| (0600);
+		\draw[->, >=stealth', rounded corners] (0500.south) -- ++(0, -0.5)-| (0700);
+		\draw[->, >=stealth'] (0700) -- (0800);
+		\draw[->, >=stealth'] (0500) -- (0900);
+		\draw[->, >=stealth', rounded corners] (0900.south) -- ++(0, -0.5)-| (0910);
+		\draw[->, >=stealth', rounded corners] (0900.south) -- ++(0, -0.5)-| (0920);
+		\draw[->, >=stealth'] (0900) -- (1000);
+		\draw[->, >=stealth'] (1000) -- (1100);
+		\draw[->, >=stealth'] (1100) -- (1200);
+	\end{tikzpicture}
 
 \section{Nicht-funktionale Anforderungen}
 	\begin{itemize}
