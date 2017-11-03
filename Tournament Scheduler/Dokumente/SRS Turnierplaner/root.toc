@@ -12,9 +12,9 @@
 \contentsline {section}{\numberline {2.6}Aufteilung und Priorisierung der Anforderungen}{2}
 \contentsline {chapter}{\numberline {3}Spezifische Anforderungen}{3}
 \contentsline {section}{\numberline {3.1}Funktionale Anforderungen}{3}
-\contentsline {section}{\numberline {3.2}Nicht-funktionale Anforderungen}{3}
-\contentsline {section}{\numberline {3.3}Externe Schnittstellen}{3}
-\contentsline {section}{\numberline {3.4}Design Constraints}{3}
-\contentsline {section}{\numberline {3.5}Anforderungen an Performance}{3}
-\contentsline {section}{\numberline {3.6}Qualit\IeC {\"a}tsanforderungen}{3}
-\contentsline {section}{\numberline {3.7}Sonstige Anforderungen}{3}
+\contentsline {section}{\numberline {3.2}Nicht-funktionale Anforderungen}{6}
+\contentsline {section}{\numberline {3.3}Externe Schnittstellen}{6}
+\contentsline {section}{\numberline {3.4}Design Constraints}{6}
+\contentsline {section}{\numberline {3.5}Anforderungen an Performance}{6}
+\contentsline {section}{\numberline {3.6}Qualit\IeC {\"a}tsanforderungen}{6}
+\contentsline {section}{\numberline {3.7}Sonstige Anforderungen}{6}
