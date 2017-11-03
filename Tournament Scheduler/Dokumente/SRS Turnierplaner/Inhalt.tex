@@ -37,11 +37,164 @@ Zur Benutzung der App benötigt der User ein iOS-fähiges Gerät und eine regist
 \section{Aufteilung und Priorisierung der Anforderungen}
 
 \chapter{Spezifische Anforderungen}
+Die Anforderungen der App werden hauptsächlich im Kapitel: "Funktionale Anforderungen" aufgeführt. Jeder Anforderung wird eine ID zugeordnet, welche sie auch in Zukunft kenntlich machen wird.
+Desweiteren werden die Anforderungen durch ein Zahlensystem von 1 bis 5 priorisiert. Dabei steht die 1 für die höchste Priorität und die 5 für die geringste Priorität. Diese Prioritäten helfen später bei der Umsetzung. Sind die Anforderungen mit der Priorität 1 und 2 abgearbeitet, so ist die App grundsätzlich lauffähig. Alle weiteren Anforderungen können durch Updates hinzugefügt  werden. Durch dieses Vorgehen wird sichergestellt, dass die App schnellstmöglich in Anwendung gehen kann.
+
 \section{Funktionale Anforderungen}
+	\begin{itemize}
+		\item[0100] Hinzufügen eines neuen Turniers
+		\item[0200] Turnier auswählen
+		\item[0300] Name eines Turniers ändern
+		\itme[0400] Turnier löschen
+		\item[0500] Mannschaft einem Turnier hinzufügen
+		\itme[0600] Mannschaft aus einem Turnier entfernen
+		\itme[0700] Spieler zu einer Mannschaft hinzufügen
+		\item[0800] Spieler aus einer Mannschaft entfernen
+		\item[0900] Eigenschaften eines Turniers wählen/ändern
+		\begin{itemize}
+			\item[0910] Sportart einstellen
+			\item[0920] Spielmodus einstellen
+		\end{itemize}
+		\item[1000] Turnier starten
+		\item[1100] Anzeige der Spiele
+		\item[1200] Spielergebnisse eintragen
+	\end{itemize}
+	
 	\begin{tabularx}{\textwidth}{|l|l|l|}
 		ID & Priorität & Abhängigkeit \\
-		   &           &              \\
+		0100 & 1 & \\
 		\hline
+		Name & \multicolumn{2}{l}{Hinzufügen eines Turniers} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0200 & 1 & 0100\\
+		\hline
+		Name & \multicolumn{2}{l}{Turnier auswählen} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0300 & 2 & 0200\\
+		\hline
+		Name & \multicolumn{2}{l}{Name eines Turniers ändern} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0400 & 3 & 0100\\
+		\hline
+		Name & \multicolumn{2}{l}{Turnier löschen} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0500 & 1 & 0200\\
+		\hline
+		Name & \multicolumn{2}{l}{Mannschaft einem Turnier hinzufügen} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0600 & 2 & 0500\\
+		\hline
+		Name & \multicolumn{2}{l}{Mannschaft aus einem Turnier entfernen} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0700 & 3 & 0500\\
+		\hline
+		Name & \multicolumn{2}{l}{Spieler einer Mannschaft hinzufügen} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0800 & 4 & 0700\\
+		\hline
+		Name & \multicolumn{2}{l}{Spieler aus einer Mannschaft entfernen} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0900 & 1 & 0500\\
+		\hline
+		Name & \multicolumn{2}{l}{Eigenschaften eines Turniers wählen/ändern} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0910 & 3 & 0900\\
+		\hline
+		Name & \multicolumn{2}{l}{Sportart auswählen} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		0920 & 2 & 0900\\
+		\hline
+		Name & \multicolumn{2}{l}{Spielmodus einstellen} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		1000 & 1 & \\
+		\hline
+		Name & \multicolumn{2}{l}{Turnier starten} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{Durch Betätigung eines Buttens "Turnier starten" wird das Turnier gestartet und die Ansetzungen angezeigt. Von nun an ist es nicht mehr möglich den Modus des Turniers, die Sportart und die Teams zu ändern. }\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		1100 & 1 & 1000\\
+		\hline
+		Name & \multicolumn{2}{l}{Anzeige der Spiele} \\
+		\multicolumn{3}{l}{Beschreibung}\\
+		\multicolumn{3}{l}{}\\
+		\hline		 
+	\end{tabularx}
+	
+	\begin{tabularx}{\textwidth}{|l|l|l|}
+		ID & Priorität & Abhängigkeit \\
+		1200 & 1 & 1100\\
+		\hline
+		Name & \multicolumn{2}{l}{Spielergebnisse eintragen} \\
 		\multicolumn{3}{l}{Beschreibung}\\
 		\multicolumn{3}{l}{}\\
 		\hline		 
