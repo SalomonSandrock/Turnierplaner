@@ -20,8 +20,6 @@ Die Einteilung in die unterschiedlichen Prioritätsstufen erfolgt jedoch zu eine
 		\hline
 	\end{tabular}
 
-\section{Aufbau des Dokuments}
-
 \chapter{Allgemeine Beschreibung des Projekts}
 \section{Produktperspektive (zu anderen Produkten)}
 In der Zukunft kann die App einerseits in ihrem Umfang aber auch ihrer Laufwerksumgebung erweitert werden.
@@ -29,12 +27,22 @@ Zur Zeit sieht das Projekt nur eine Realisierung für iOS-Geräte vor. Hierbei w
 Mit der Zeit werden auch weitere Sportarten integriert. Die App wird zunächst allgemein entwickelt, sodass viele Sportarten abgedeckt werden können. Jedoch werden Spezialisierungen nach und nach eingefügt.
  
 \section{Übersicht der Produktfunktionen}
+\begin{itemize}
+		\item Turniere erstellen
+		\item Mannschaft einem Turnier hinzufügen
+		\item Spieler zu einer Mannschaft hinzufügen
+		\item Eigenschaften eines Turniers wählen/ändern
+		\begin{itemize}
+			\item Sportart einstellen
+			\item Spielmodus einstellen
+		\end{itemize}
+		\item[1100] Anzeige der Spiele
+		\item[1200] Spielergebnisse eintragen
+	\end{itemize}
+	
 \section{Benutzermerkmale}
 Zur Benutzung der App benötigt der User ein iOS-fähiges Gerät und eine registrierte Apple-ID.
-
-\section{Einschränkungen für den Entwickler}
-\section{Annahmen und Abhängigkeiten}
-\section{Aufteilung und Priorisierung der Anforderungen}
+Darüber hinaus benötigt die App eine iOS-Version 11.1 oder höher.
 
 \chapter{Spezifische Anforderungen}
 Die Anforderungen der App werden hauptsächlich im Kapitel: "Funktionale Anforderungen" aufgeführt. Jeder Anforderung wird eine ID zugeordnet, welche sie auch in Zukunft kenntlich machen wird.
@@ -60,171 +68,187 @@ Desweiteren werden die Anforderungen durch ein Zahlensystem von 1 bis 5 priorisi
 		\item[1200] Spielergebnisse eintragen
 	\end{itemize}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0100 & 1 & \\
 		\hline
 		\multicolumn{3}{|l|}{Name: Hinzufügen eines Turniers} \\
 		\hline		
-		\multicolumn{3}{|l|}{Beschreibung:}\\
-		\multicolumn{3}{|l|}{Im Startfenster kann ein Turnier durch Betätigung des Buttons "+" ein Turnier hinzugefügt werden. Ein Popp up Fenster mit Eingabefeld erscheint.}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Im Startfenster kann ein Turnier durch Betätigung des Buttons "+" ein Turnier hinzugefügt werden. Ein Popp up Fenster mit Eingabefeld erscheint.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0200 & 1 & 0100\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Turnier auswählen} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Die Liste der vorhandenen Turniere wird im Startfenster angezeigt. Berührt man einen dieser Namen, so öffnet sich ein neues Fenster (Informationsfenster) mit bereits vorhandenen Informationen zu diesem Turnier.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0300 & 2 & 0200\\
 		\hline
 		\multicolumn{3}{|l|}{Name: eines Turniers ändern} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Im Informationsfenster wird auch der Name des Turnies angezeigt. Wird dieser mit dem Finger berührt, erscheint ein Popp Up Fenster mit einem Eingabefenster. In diesem steht der aktuelle Name. Dieser kann nun geändert werden. Durch Betätigung des Buttons "Save" wird der neue Name gespeichert.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0400 & 3 & 0200\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Turnier löschen} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Wird im Startbildschirm über den Namen eines Turniers nach links gewischt, so erscheint ein Button "X" auf der rechten Seite des Listenfeldes. Wird dieser betätigt, wird das Turnier nach wiederholter Frage und Auflistung der Konsequenzen das gesamte Turnier und die dazugehörigen Daten gelöscht.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0500 & 1 & 0200\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Mannschaft einem Turnier hinzufügen} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Im Informationsfenster können Mannschaften hinzugefügt werden. Ist diese hinzugefügt, erscheint der Name in einem Listenfeld.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0600 & 2 & 0500\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Mannschaft aus einem Turnier entfernen} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Wischt man im Listenfeld der Mannschaften über einem Namen nach links, so erscheint ein "X" auf der rechten Seite. Wird dieser Button betätigt wird die Mannschaft aus dem Turnier entfernt.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0700 & 3 & 0500\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Spieler einer Mannschaft hinzufügen} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Wird der Name einer Mannschaft berührt, so öffnet sich das Mannschaftsfenster. Hier können Spieler der Mannschaft hinzugefügt werden.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0800 & 4 & 0700\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Spieler aus einer Mannschaft entfernen} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Wischt man im Listenfeld der Spieler über einem Namen nach links, so erscheint ein "X" auf der rechten Seite. Wird dieser Button betätigt wird der Spieler aus der Mannschaft entfernt.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0900 & 1 & 0500\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Eigenschaften eines Turniers wählen/ändern} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Befindet man sich im Informationsfenster können verschiedenen Einstellungen getroffen werden. Diese werden mit der Zeit erweitert. Hier eine kleine Auswahl:
+		\begin{itemize}
+			\item[0910] Sportart auswählen
+			\item[0920] Spielmodus einstellen
+			\begin{itemize}
+				\item[0921] Jeder gegen jeden
+				\item[0922] Double Elimination
+				\item[0923] Gruppenphase + Ausspielen der Plätze 
+			\end{itemize}
+			\item[0930] Anzahl der Felder
+		\end{itemize}
+		}\\
+		
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0910 & 3 & 0900\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Sportart auswählen} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Tippt man im Informationsfenster auf des Textfeld für die Sportart, so erscheint eine Liste von implementierten Sportarten.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		0920 & 2 & 0900\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Spielmodus einstellen} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Wird das Auswahlfeld mit dem Sportmodus betätigt erscheint eine Auswahlliste der implementierten Modi. Die Modi werden mit der Zeit erweitert. Für den Anfang werden folgende Modi umgesetzt:
+		\begin{itemize}
+				\item[0921] Jeder gegen jeden
+				\item[0922] Double Elimination 
+			\end{itemize}}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		1000 & 1 & 0900\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Turnier starten} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{Durch Betätigung eines Buttens "Turnier starten" wird das Turnier gestartet und die Ansetzungen angezeigt. Von nun an ist es nicht mehr möglich den Modus des Turniers, die Sportart und die Teams zu ändern. }\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Durch Betätigung eines Buttens "Turnier starten" im Informationsfenster wird das Turnier gestartet und die Ansetzungen angezeigt. Von nun an ist es nicht mehr möglich den Modus des Turniers, die Sportart und die Teams zu ändern. }\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		1100 & 1 & 1000\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Anzeige der Spiele} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Die Anzeige der Spiele erfolgt im Turnierfenster. Die Anzeige variiert je nach dem welcher Turniermodus aktiviert wurde.}\\
 		\hline		 
 	\end{tabularx}
 	
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|l|c|l|}
 		\hline
 		ID & Priorität & Abhängigkeit \\
 		1200 & 1 & 1100\\
 		\hline
 		\multicolumn{3}{|l|}{Name: Spielergebnisse eintragen} \\
 		\hline
-		\multicolumn{3}{|l|}{Beschreibung}\\
-		\multicolumn{3}{|l|}{}\\
+		\multicolumn{3}{|l|}{\textbf{Beschreibung}}\\
+		\multicolumn{3}{|X|}{Wird auf ein Spiel getippt, erscheint eine Eingabemaske, in der der Endstand eingetragen werden kann.}\\
 		\hline		 
 	\end{tabularx}
 	
@@ -268,7 +292,6 @@ Desweiteren werden die Anforderungen durch ein Zahlensystem von 1 bis 5 priorisi
 	\end{itemize}
 	
 \section{Externe Schnittstellen}
-\section{Design Constraints}
-\section{Anforderungen an Performance}
-\section{Qualitätsanforderungen}
-\section{Sonstige Anforderungen}
+Zur Zeit sind keine externen Schnittstellen geplant. Allerdings könnte man die Daten in Zukunft in der iCloud speichern, um die Daten auf allen iOS Geräten der gleichen Apple-ID zu verwenden. Aber auch die Funktion die Ergebnisse zu teilen ist denkbar.
+Zudem kann auch eine Funktion erstellt werden, mit der man automatisch Urkunden erstellen kann und diese versendet oder duckt.
+
